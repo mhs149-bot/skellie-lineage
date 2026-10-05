@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Skellie lineage: Michael → Alexander (SAR Gen 1–9)</title>
+<style>
+  :root{
+    --paper:#fbf6ec; --ink:#3a2d22; --muted:#7a6656; --accent:#8c4a2f;
+    --gold:#b98b3e; --card:#fffdf8; --line:#c9ad86; --tbd:#9a8a7a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,serif;line-height:1.5}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 22px 60px}
+  header{text-align:center;margin-bottom:28px}
+  .crest{font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+  h1{font-size:clamp(28px,5vw,42px);margin:0 0 8px;color:var(--accent);font-weight:normal}
+  h1 .arrow{color:var(--gold)}
+  .sub{color:var(--muted);font-style:italic;max-width:600px;margin:0 auto}
+  .for{margin-top:10px;font-size:15px}
+  h2{font-weight:normal;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:4px;margin-top:44px;font-size:24px}
+
+  /* Vertical tree */
+  .tree{position:relative;margin:30px auto 0;padding:0;list-style:none;max-width:620px}
+  .tree::before{content:"";position:absolute;left:34px;top:30px;bottom:30px;width:3px;
+    background:linear-gradient(var(--gold),var(--accent));border-radius:2px}
+  .gen{position:relative;display:flex;align-items:flex-start;gap:18px;margin:0 0 16px;break-inside:avoid;page-break-inside:avoid}
+  .badge{flex:0 0 70px;height:70px;border-radius:50%;background:var(--card);border:3px solid var(--gold);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:1;
+    box-shadow:0 2px 6px rgba(80,50,20,.12)}
+  .badge small{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+  .badge b{font-size:24px;color:var(--accent);line-height:1}
+  .card{flex:1;background:var(--card);border:1px solid #e6d6bd;border-left:4px solid var(--accent);
+    border-radius:8px;padding:12px 16px;box-shadow:0 2px 8px rgba(80,50,20,.07)}
+  .name{font-size:20px;margin:0}
+  .dates{font-size:14px;color:var(--muted);margin:2px 0 0}
+  .dates.tbd{color:var(--tbd);font-style:italic}
+  .note{font-size:14.5px;margin:6px 0 0}
+  .est{font-size:12px;background:#f3e6cf;color:var(--accent);padding:1px 6px;border-radius:10px;margin-left:4px;font-style:normal}
+  .gen.first .badge,.gen.last .badge{background:var(--accent);border-color:var(--accent)}
+  .gen.first .badge b,.gen.last .badge b,.gen.first .badge small,.gen.last .badge small{color:#fff}
+
+  .glance{text-align:center;font-size:15px;color:var(--muted);margin-top:18px}
+  .glance strong{color:var(--ink);font-weight:normal}
+
+  /* Place chain */
+  .places{display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:8px;margin-top:18px}
+  .place{background:var(--card);border:1px solid #e6d6bd;border-radius:8px;padding:10px 14px;text-align:center;flex:1 1 150px;max-width:190px}
+  .place b{display:block;color:var(--accent);font-weight:normal;font-size:16px}
+  .place span{font-size:13px;color:var(--muted)}
+  .chev{align-self:center;color:var(--gold);font-size:22px}
+  .memory{text-align:center;font-style:italic;color:var(--muted);margin-top:12px}
+
+  .inspire{background:#f6ecdb;border:1px solid #e3cfac;border-radius:10px;padding:16px 20px;margin-top:16px}
+  .inspire h3{margin:0 0 6px;font-weight:normal;color:var(--accent)}
+  .medal{float:right;font-size:34px;margin-left:12px}
+  .foot-note{font-size:14px;color:var(--muted);margin-top:16px}
+  footer{margin-top:48px;border-top:1px solid var(--line);padding-top:14px;font-size:13.5px;color:var(--muted);text-align:center}
+
+
+  .top{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+  .pill{font-size:11px;letter-spacing:.04em;padding:2px 8px;border-radius:10px;white-space:nowrap;font-style:normal}
+  .pill.strong{background:#e3efdc;color:#2f5d22;border:1px solid #b9d3a9}
+  .pill.medium{background:#fbefd4;color:#7a5a12;border:1px solid #e7cf93}
+  .pill.weak{background:#f6dcd6;color:#7a2a1c;border:1px solid #e3b0a4}
+  .pill.family{background:#e6e3f3;color:#43386e;border:1px solid #c6bfe3}
+  .dates b{color:var(--accent);font-weight:normal}
+  .dates .tbd{color:var(--tbd);font-style:italic}
+  sup{font-size:10.5px;line-height:0}
+  a.fn{color:var(--accent);text-decoration:none;padding:0 1px}
+  a.fn:hover{text-decoration:underline}
+  .reality{background:#fffdf8;border:1px solid #e6d6bd;border-left:4px solid var(--gold);border-radius:8px;padding:12px 16px;margin-top:14px;font-size:15px}
+  .reality ul{margin:6px 0 0 18px;padding:0}
+  table.summary{width:100%;border-collapse:collapse;font-size:14px;margin-top:12px;background:var(--card)}
+  table.summary th,table.summary td{border-bottom:1px solid #eadcc4;padding:6px 8px;text-align:left;vertical-align:top}
+  table.summary th{color:var(--accent);font-weight:normal;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+  ol.sources{font-size:13.5px;color:var(--muted);padding-left:22px}
+  ol.sources li{margin:4px 0}
+  ol.sources li:target{background:#f6ecdb}
+  ol.sources a{color:var(--ink)}
+  .conf li,.gaps li{margin:4px 0;font-size:14.5px}
+  @media (max-width:520px){table.summary{font-size:12.5px}}
+  @media (max-width:520px){
+    .tree::before{left:26px}
+    .badge{flex-basis:54px;height:54px}
+    .badge b{font-size:19px}
+    .chev{display:none}
+  }
+  @media print{
+    body{background:#fff}
+    .wrap{padding:0 10px;max-width:none}
+    .card,.place,.badge,.inspire{box-shadow:none}
+    h2{margin-top:26px}
+    .gen{margin-bottom:9px}
+    a{color:inherit;text-decoration:none}
+    @page{margin:14mm}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="crest">The Skellie Family · SAR numbering</div>
+    <h1>Michael <span class="arrow">→</span> Alexander</h1>
+    <p class="sub">SAR-style generations: Gen&nbsp;1 Michael Harrison Skellie (applicant) ascending to Gen&nbsp;9 Alexander Skellie (patriot, Cambridge NY, 1774).</p>
+    <p class="for">Prepared for <strong>Michael Harrison Skellie</strong> (Uncle Mike)</p>
+  </header>
+
+  <h2>The line</h2>
+  <p>Generations use <strong>SAR numbering</strong>: Gen&nbsp;1 is the applicant (Michael), counting up the paternal line to Gen&nbsp;9, the patriot (Alexander). Display order is you → ancestor. Every date links to its source (small numbers); nothing is guessed. Marriage dates appear on each card when known; anything not yet proven says <em>TBD</em>.</p>
+
+  <div class="reality"><b>What is proven so far:</b>
+    <ul>
+      <li><b>Gen 3–9 dates are verified</b> (Harrison Roy through Alexander) from gravestones, the NY State Death Index, the Social Security Death Index, and cemetery records.</li>
+      <li><b>Links Gen 9→8→7 are well documented</b> (Alexander→John→Edward: 1911 church history; John &amp; Hannah's family Bible).</li>
+      <li><b>Links Gen 7→3</b> (Edward through Harrison Roy) rest on Find a Grave family links and volunteer census notes. They are consistent, but census pages or death certificates are still needed for an SAR packet.</li>
+      <li><b>Gen 3→1 is family knowledge</b> (living people; not searched in records).</li>
+    </ul>
+  </div>
+
+  <ol class="tree">
+    <li class="gen first"><div class="badge"><small>Gen</small><b>1</b></div>
+      <div class="card"><div class="top"><p class="name">Michael Harrison Skellie</p><span class="pill family">Family-known · SAR Gen 1 (applicant)</span></div>
+        <p class="dates"><b>b.</b> 1981<sup><a href="#s20" class="fn">20</a></sup><br><b>m.</b> <span class="tbd">TBD</span> · spouse Valerie (living; date not published)<sup><a href="#s20" class="fn">20</a></sup></p>
+        <p class="note">“Uncle Mike.” Middle name Harrison, after his grandfather (d. July 1981).<sup><a href="#s20" class="fn">20</a></sup></p>
+        <p class="note" style="font-size:13.5px;color:var(--muted)"><em>Family note (not on the SAR application line):</em> son Arthur Harrison Skellie (dates TBD) — carries on the Arthur + Harrison naming.<sup><a href="#s20" class="fn">20</a></sup></p></div></li>
+    <li class="gen"><div class="badge"><small>Gen</small><b>2</b></div>
+      <div class="card"><div class="top"><p class="name">David Skellie</p><span class="pill family">Family-known</span></div>
+        <p class="dates"><span class="tbd">living. Dates not published</span><sup><a href="#s20" class="fn">20</a></sup><br><b>m.</b> <span class="tbd">TBD</span> · spouse living (Mike’s mother; date not published)<sup><a href="#s20" class="fn">20</a></sup></p>
+        <p class="note">Son of Harrison Roy. Living, so dates are intentionally not published.<sup><a href="#s20" class="fn">20</a></sup></p></div></li>
+    <li class="gen"><div class="badge"><small>Gen</small><b>3</b></div>
+      <div class="card"><div class="top"><p class="name">Harrison Roy Skellie</p><span class="pill strong">Strong (dates) · link medium</span></div>
+        <p class="dates"><b>b.</b> 20 Jan 1920 (place TBD)<br><b>d.</b> 31 Jul 1981, Erie Co., PA<sup><a href="#s18" class="fn">18</a>,<a href="#s21" class="fn">21</a>,<a href="#s19" class="fn">19</a></sup><br><b>m.</b> 13 Sep 1947, Erie, PA · Mary Doris (Mathews) Skellie (1923–1992)<sup><a href="#s23" class="fn">23</a></sup> <span class="pill medium">Medium (FAG bio)</span></p>
+        <p class="note">Laurel Hill Cemetery record: Sec. 3M, Lot 101, Grave 3. Shared stone with Mary D.<sup><a href="#s18" class="fn">18</a>,<a href="#s19" class="fn">19</a></sup></p><p class="note">Son of Roy A. &amp; Alice J. per Find a Grave links (spouse bio also names parents). Michael’s grandfather and the source of the “Harrison” name.<sup><a href="#s19" class="fn">19</a>,<a href="#s23" class="fn">23</a>,<a href="#s20" class="fn">20</a></sup></p></div></li>
+    <li class="gen"><div class="badge"><small>Gen</small><b>4</b></div>
+      <div class="card"><div class="top"><p class="name">Roy A. Skellie</p><span class="pill strong">Strong (dates) · link medium</span></div>
+        <p class="dates"><b>b.</b> 26 Nov 1892, Findley Lake (Mina), NY<br><b>d.</b> 9 Jun 1979, Erie, PA<sup><a href="#s17" class="fn">17</a>,<a href="#s16" class="fn">16</a></sup><br><b>m.</b> 1916 · Alice J. (Abbey) Skellie (1895–1946)<sup><a href="#s17" class="fn">17</a>,<a href="#s24" class="fn">24</a></sup> <span class="pill medium">Medium (FAG year)</span><br><b>m.</b> <span class="tbd">TBD</span> · later Vena Florence (Duncombe) Skellie (1902–1968)<sup><a href="#s17" class="fn">17</a>,<a href="#s25" class="fn">25</a></sup></p>
+        <p class="note">SSDI agrees: b. 26 Nov 1892, d. June 1979, Erie PA. Shared stone with Alice J. Buried Erie Cemetery. FAG spouse fields give Alice “(m. 1916)”; no free license/newspaper date found this pass. Vena is linked as spouse with no marriage year.<sup><a href="#s16" class="fn">16</a>,<a href="#s17" class="fn">17</a>,<a href="#s24" class="fn">24</a>,<a href="#s25" class="fn">25</a></sup></p><p class="note">Son of George P. &amp; May per Find a Grave links (medium). This is where the family moved from Findley Lake to Erie.<sup><a href="#s17" class="fn">17</a></sup></p></div></li>
+    <li class="gen"><div class="badge"><small>Gen</small><b>5</b></div>
+      <div class="card"><div class="top"><p class="name">George P. Skellie</p><span class="pill medium">Medium-strong</span></div>
+        <p class="dates"><b>b.</b> 1869, Mina, NY (day TBD)<br><b>d.</b> 2 Feb 1942, Mina, NY<sup><a href="#s15" class="fn">15</a>,<a href="#s12" class="fn">12</a>,<a href="#s11" class="fn">11</a></sup><br><b>m.</b> <span class="tbd">TBD</span> · May A. Skellie (1871–1940)<sup><a href="#s15" class="fn">15</a>,<a href="#s26" class="fn">26</a></sup></p>
+        <p class="note">His stone reads “George P. Skellie 1869–1942.” The state index has a death on 2 Feb 1942 at Mina, age 72, but it is indexed as <i>“George D.”</i> May A. Skellie died 5 Jun 1940 at Mina, age 69, matching May’s stone (1871–1940). No free marriage date found (FAG/NYGenWeb/Painted Hills/Wilcox 1851–1890 index/NYS Marriage Index 1889–1892).<sup><a href="#s15" class="fn">15</a>,<a href="#s12" class="fn">12</a>,<a href="#s26" class="fn">26</a></sup></p><p class="note"><b>Flag:</b> “P” on the stone vs “D” in the index. Son of Job D. &amp; Melissa per Find a Grave links (medium).<sup><a href="#s15" class="fn">15</a>,<a href="#s10" class="fn">10</a></sup></p></div></li>
+    <li class="gen"><div class="badge"><small>Gen</small><b>6</b></div>
+      <div class="card"><div class="top"><p class="name">Job D. Skellie</p><span class="pill strong">Strong (death) · birth day medium</span></div>
+        <p class="dates"><b>b.</b> 6 Dec 1835 (place TBD)<br><b>d.</b> 24 Aug 1917, Mina, Chautauqua Co., NY<sup><a href="#s12" class="fn">12</a>,<a href="#s13" class="fn">13</a>,<a href="#s10" class="fn">10</a></sup><br><b>m.</b> <span class="tbd">TBD</span> · Melissa (Holdridge) Skellie (1842–1917)<sup><a href="#s13" class="fn">13</a>,<a href="#s27" class="fn">27</a>,<a href="#s10" class="fn">10</a></sup></p>
+        <p class="note">NY State Death Index, cert #52345, Mina, 1917. His stone shows “1835–1917.” Melissa died Apr 1917 (carriage accident near Mina; FAG/obit text). No free marriage date found.<sup><a href="#s12" class="fn">12</a>,<a href="#s13" class="fn">13</a>,<a href="#s27" class="fn">27</a></sup></p><p class="note">Son of Edward &amp; Orinda per Find a Grave and NYGenWeb notes. Farm laborer for Dr. Alvah Jennings (1860 census, Mina). Parent link is medium until a census page is attached.<sup><a href="#s13" class="fn">13</a>,<a href="#s10" class="fn">10</a>,<a href="#s14" class="fn">14</a></sup></p></div></li>
+    <li class="gen"><div class="badge"><small>Gen</small><b>7</b></div>
+      <div class="card"><div class="top"><p class="name">Edward Skellie</p><span class="pill strong">Strong</span></div>
+        <p class="dates"><b>b.</b> 5 May 1801, Cambridge, NY<br><b>d.</b> 13 Aug 1884, Sherman, Chautauqua Co., NY<sup><a href="#s9" class="fn">9</a>,<a href="#s8" class="fn">8</a>,<a href="#s11" class="fn">11</a></sup><br><b>m.</b> <span class="tbd">TBD</span> · Orinda (Deuel/Duell) Skellie (1804–1865)<sup><a href="#s9" class="fn">9</a>,<a href="#s28" class="fn">28</a></sup><br><b>m.</b> <span class="tbd">TBD</span> · Jeanette/Janett (Doig) Skellie (1806–1877), widow of brother James (after Orinda’s death 10 Oct 1865)<sup><a href="#s9" class="fn">9</a></sup></p>
+        <p class="note">His monument reads “Born May 5, 1801 / Died Aug 13, 1884” (Mina Cemetery). The family Bible lists “Edward Skellie was born May 5th 1801” among John &amp; Hannah’s children, which ties him to Gen&nbsp;8.<sup><a href="#s9" class="fn">9</a>,<a href="#s8" class="fn">8</a>,<a href="#s10" class="fn">10</a></sup></p><p class="note">FAG bio names both wives; no free marriage dates found (Bible has births only; McClurg PDF). Orinda’s stone/notes: d. 10 Oct 1865, age 61.<sup><a href="#s9" class="fn">9</a>,<a href="#s10" class="fn">10</a>,<a href="#s28" class="fn">28</a></sup></p></div></li>
+    <li class="gen"><div class="badge"><small>Gen</small><b>8</b></div>
+      <div class="card"><div class="top"><p class="name">John Skellie</p><span class="pill strong">Strong</span></div>
+        <p class="dates"><b>b.</b> 21 Apr 1764, Scotland<br><b>d.</b> 4 Aug 1844, Cambridge, NY<sup><a href="#s6" class="fn">6</a>,<a href="#s7" class="fn">7</a></sup><br><b>m.</b> <span class="tbd">TBD</span> · Hannah (Edgar) Skellie (13 Sep 1773 – 12 Dec 1851)<sup><a href="#s6" class="fn">6</a>,<a href="#s7" class="fn">7</a>,<a href="#s29" class="fn">29</a></sup></p>
+        <p class="note">His stone reads “Died Aug. 4, 18[44] in the 81 year of his age.” Scott 1911: wife was Hannah Edgar, daughter of William; they raised 15 children on Alexander’s farm. No free marriage date (FAG spouse link has no year; WikiTree “1788” is Weak-only and not used here).<sup><a href="#s6" class="fn">6</a>,<a href="#s7" class="fn">7</a>,<a href="#s29" class="fn">29</a></sup></p><p class="note"><b>Conflict:</b> the family Bible gives <i>10</i> Apr 1764. It was printed in 1850, so the entry was written decades later. The stone fits either date.<sup><a href="#s8" class="fn">8</a></sup></p></div></li>
+    <li class="gen last"><div class="badge"><small>Gen</small><b>9</b></div>
+      <div class="card"><div class="top"><p class="name">Alexander Skellie</p><span class="pill strong">Strong (death) · birth year derived · SAR Gen 9 (patriot)</span></div>
+        <p class="dates"><b>b.</b> c. 1735, Scotland<br><b>d.</b> 25 Mar 1816, Cambridge, Washington Co., NY<sup><a href="#s1" class="fn">1</a>,<a href="#s5" class="fn">5</a>,<a href="#s3" class="fn">3</a></sup><br><b>m.</b> <span class="tbd">TBD</span> · Jannet Skellie (c. 1735 – 22 Jun 1780)<sup><a href="#s1" class="fn">1</a>,<a href="#s30" class="fn">30</a></sup><br><b>m.</b> <span class="tbd">TBD</span> · Elizabeth Skellie (1757–1819)<sup><a href="#s1" class="fn">1</a>,<a href="#s31" class="fn">31</a></sup></p>
+        <p class="note">The original stone reads “died March 25, 1816, in the 81 year of his age. Revolutionary Soldier.” A modern marker reads “16 Albany County Militia, 1735–1816.”<sup><a href="#s1" class="fn">1</a></sup></p><p class="note">Militia roster lists “Skelly, Alexander.” Town officer by 1776; church elder 1785; buried Old Turnpike Graveyard. Spouses linked on FAG (Jannet; Elizabeth “wife of Alexander”); marriage dates not found free.<sup><a href="#s2" class="fn">2</a>,<a href="#s3" class="fn">3</a>,<a href="#s30" class="fn">30</a>,<a href="#s31" class="fn">31</a></sup></p><p class="note"><b>Conflicts:</b> born 1735 vs 1736. Origin is “Guras”/Gurock near Glasgow per family papers, but one online tree ties him to a 1759 baptism in Sorbie, Wigtownshire. That match is unverified, so the Scottish origin is treated as family tradition.<sup><a href="#s4" class="fn">4</a></sup></p></div></li>
+  </ol>
+  <p class="glance"><strong>Michael → David → Harrison Roy → Roy A. → George P. → Job D. → Edward → John → Alexander</strong></p>
+
+  <h2>At a glance</h2>
+  <table class="summary"><thead><tr><th>Gen</th><th>Name</th><th>Born</th><th>Died</th><th>Marriage</th><th>Proof</th></tr></thead><tbody>
+<tr><td>1</td><td>Michael Harrison Skellie</td><td>1981</td><td>—</td><td><em>TBD</em> · Valerie (living)</td><td><span class='pill family'>Family-known · applicant</span></td></tr>
+<tr><td>2</td><td>David Skellie</td><td>living</td><td>—</td><td><em>TBD</em> · spouse living</td><td><span class='pill family'>Family-known</span></td></tr>
+<tr><td>3</td><td>Harrison Roy Skellie</td><td>20 Jan 1920 (place TBD)</td><td>31 Jul 1981, Erie Co., PA</td><td>13 Sep 1947, Erie PA · Mary D. Mathews <span class='pill medium'>Medium</span></td><td><span class='pill strong'>Strong (dates) · link medium</span></td></tr>
+<tr><td>4</td><td>Roy A. Skellie</td><td>26 Nov 1892, Findley Lake (Mina), NY</td><td>9 Jun 1979, Erie, PA</td><td>1916 · Alice J. Abbey <span class='pill medium'>Medium</span>; later Vena F. Duncombe <em>TBD</em></td><td><span class='pill strong'>Strong (dates) · link medium</span></td></tr>
+<tr><td>5</td><td>George P. Skellie</td><td>1869, Mina, NY (day TBD)</td><td>2 Feb 1942, Mina, NY</td><td><em>TBD</em> · May A.</td><td><span class='pill medium'>Medium-strong</span></td></tr>
+<tr><td>6</td><td>Job D. Skellie</td><td>6 Dec 1835 (place TBD)</td><td>24 Aug 1917, Mina, Chautauqua Co., NY</td><td><em>TBD</em> · Melissa Holdridge</td><td><span class='pill strong'>Strong (death) · birth day medium</span></td></tr>
+<tr><td>7</td><td>Edward Skellie</td><td>5 May 1801, Cambridge, NY</td><td>13 Aug 1884, Sherman, Chautauqua Co., NY</td><td><em>TBD</em> · Orinda Deuel/Duell; <em>TBD</em> · Jeanette Doig</td><td><span class='pill strong'>Strong</span></td></tr>
+<tr><td>8</td><td>John Skellie</td><td>21 Apr 1764, Scotland</td><td>4 Aug 1844, Cambridge, NY</td><td><em>TBD</em> · Hannah Edgar</td><td><span class='pill strong'>Strong</span></td></tr>
+<tr><td>9</td><td>Alexander Skellie</td><td>c. 1735, Scotland</td><td>25 Mar 1816, Cambridge, Washington Co., NY</td><td><em>TBD</em> · Jannet; <em>TBD</em> · Elizabeth</td><td><span class='pill strong'>Strong (death) · birth year derived · patriot</span></td></tr>
+</tbody></table>
+
+  <h2>Where sources disagree</h2>
+  <ul class="conf">
+    <li><b>Alexander's birth year:</b> 1735 (veteran marker, Find a Grave) vs 1736 (one online-tree note). His original stone says he died “in the 81 year of his age,” which fits either.</li>
+    <li><b>Alexander's origin:</b> “Guras”/Gurock near Glasgow (family papers) vs a 1759 baptism in Sorbie, Wigtownshire cited on one online tree. That match is unproven.</li>
+    <li><b>John's birthday:</b> 21 Apr 1764 (Find a Grave, WikiTree) vs 10 Apr 1764 (family Bible, written after 1850).</li>
+    <li><b>George's middle initial:</b> “P.” on the gravestone vs “D.” in the 1942 state death index. Same place (Mina), age 72, and his wife May died there in 1940, so it is almost surely him. The certificate will settle it.</li>
+  </ul>
+
+  <h2>Place chain</h2>
+  <div class="places">
+    <div class="place"><b>Scotland</b><span>Gurock / “Guras,” near Glasgow<br>(family tradition)</span></div>
+    <div class="chev">›</div>
+    <div class="place"><b>Cambridge, NY</b><span>Washington County · 1774–1840s<br>(Alexander, John, Edward b. 1801)</span></div>
+    <div class="chev">›</div>
+    <div class="place"><b>Mina / Findley Lake, NY</b><span>Chautauqua County · by 1860–1940s<br>(Edward, Job, George P., Roy b. 1892)</span></div>
+    <div class="chev">›</div>
+    <div class="place"><b>Erie County, PA</b><span>Erie / Millcreek<br>(Roy, Harrison Roy, family today)</span></div>
+  </div>
+  <p class="memory">In living memory, the family story runs Findley Lake → Erie.</p>
+
+  <h2>Inspiration</h2>
+  <div class="inspire">
+    <span class="medal" aria-hidden="true">🎖️</span>
+    <h3>Ebenezer Skellie (1842–1898)</h3>
+    <p style="margin:0">Civil War Medal of Honor, Co. D, 112th New York Infantry, Chaffin’s Farm, 29 Sep 1864. Ebenezer was the son of James Skellie, Edward’s brother, which makes him a first cousin of Job. He is on a <strong>side branch</strong>, not the SAR patriot line above. He is part of the same bloodline’s story and an inspiration for the family, not a separate paperwork line.<sup><a href="#s22" class="fn">22</a>,<a href="#s10" class="fn">10</a>,<a href="#s11" class="fn">11</a></sup></p>
+  </div>
+  <p class="foot-note"><em>Optional naming note:</em> cousin James Arthur Mathews (Jim) is another “Arthur” in the wider family. Harrison Roy’s wife was Mary D. (Mathews) Skellie.</p>
+
+  <h2>Still to prove</h2>
+  <ul class="gaps">
+    <li>Census pages tying each parent to child for Gen 7→3: 1850 and 1880 Mina; 1900 and 1910 Mina; 1920–1940 Erie.</li>
+    <li>NY death certificates for Job D. (1917, #52345) and George P. (1942, #9725), which give exact birth dates and parents.</li>
+    <li>Obituaries for Roy A. (June 1979) and Harrison Roy (Aug 1981) from the Erie Times-News.</li>
+    <li><b>Marriage records still TBD:</b> PA license for Harrison ↔ Mary (13 Sep 1947 Erie — request to confirm FAG bio); PA/NY license for Roy ↔ Alice (FAG “1916”); Roy ↔ Vena; George ↔ May; Job ↔ Melissa; Edward ↔ Orinda and ↔ Jeanette Doig; John ↔ Hannah Edgar; Alexander ↔ Jannet / Elizabeth. Living gens 1–2: leave unpublished unless Mike supplies.</li>
+    <li>Earlier SAR applications on this line, plus Bob Cochran’s SAR folder.</li>
+    <li>Birthplaces for Job and Harrison Roy; George P.’s exact birth date; May A.’s maiden name.</li>
+  </ul>
+
+  <h2>Sources</h2>
+  <ol class="sources"><li id="s1"><a href="https://www.findagrave.com/memorial/10755490/alexander-skellie" rel="noopener">Find a Grave #10755490: Alexander Skellie, Old Turnpike Graveyard, Cambridge NY (original stone + veteran marker photos)</a></li><li id="s2"><a href="https://www.americanwars.org/ny-american-revolution/albany-county-militia-sixteenth-regiment.htm" rel="noopener">Albany County Militia, 16th Regiment roster (from New York in the Revolution): “Skelly, Alexander”</a></li><li id="s3"><a href="https://www.familyfindings.com/2006/08/bullions-elders/" rel="noopener">Rev. John C. Scott, The Men Who Called Dr. Bullions 104 Years Ago (Washington County Post, 1911): Elders</a></li><li id="s4"><a href="https://www.wikitree.com/wiki/Skellie-18" rel="noopener">WikiTree Skellie-18 (pointer only; cites the 1921 “Skellie Homestead” booklet and Matilda Wright Skellie family history)</a></li><li id="s5"><a href="https://sargraves.erickkrueger.com/patriot/display/8056" rel="noopener">Empire State Society SAR Graves Registry: Alexander Skellie (d. 3/25/1816, age 81, Soldier, NY)</a></li><li id="s6"><a href="https://www.findagrave.com/memorial/46274657/john-skellie" rel="noopener">Find a Grave #46274657: John Skellie, Old Turnpike Graveyard (stone photo)</a></li><li id="s7"><a href="https://www.familyfindings.com/2006/08/bullions-members/" rel="noopener">Scott 1911: Members list (“John Skellie, aged forty-three; son of Alexander … died in 1844”)</a></li><li id="s8"><a href="https://mcclurgmuseum.org/collection/library/bibles/Skellie/Skelliewm.pdf" rel="noopener">Skellie family Bible (Buffalo, 1850), Chautauqua County Historical Society / McClurg Museum: John &amp; Hannah’s children’s births</a></li><li id="s9"><a href="https://www.findagrave.com/memorial/214529731/edward-skellie" rel="noopener">Find a Grave #214529731: Edward Skellie, Mina Cemetery (monument photo)</a></li><li id="s10"><a href="http://chautauqua.nygenweb.net/CEMETERY/Mina_cor.html" rel="noopener">Chautauqua NYGenWeb: Mina Corners Cemetery transcription &amp; family notes</a></li><li id="s11"><a href="http://www.paintedhills.org/CHAUTAUQUA/MinaCem/Mina_R-Z.html" rel="noopener">Painted Hills Genealogy Society: Mina Cemetery R–Z (walked 2004)</a></li><li id="s12"><a href="https://archive.org/details/reclaim-the-records-new-york-state-death-index-1880-1971" rel="noopener">New York State Death Index (Reclaim The Records): Job D. Skellie cert #52345 (1917); “George D” Skellie cert #9725 (1942); May A. Skellie cert #35820 (1940)</a></li><li id="s13"><a href="https://www.findagrave.com/memorial/21245920/job-d-skellie" rel="noopener">Find a Grave #21245920: Job D. Skellie, Mina Cemetery (stone photo)</a></li><li id="s14"><a href="http://chautauqua.nygenweb.net/CENSUS/Mina1860.html" rel="noopener">1860 U.S. Census index, Mina NY (Chautauqua NYGenWeb)</a></li><li id="s15"><a href="https://www.findagrave.com/memorial/21245869/george-p-skellie" rel="noopener">Find a Grave #21245869: George P. Skellie, Mina Cemetery (stone photo)</a></li><li id="s16"><a href="https://socialsecuritydeathindexsearch.com/name/skellie/roy" rel="noopener">Social Security Death Index: Roy Skellie, b. 26 Nov 1892, d. Jun 1979, Erie PA</a></li><li id="s17"><a href="https://www.findagrave.com/memorial/125478354/roy-a-skellie" rel="noopener">Find a Grave #125478354: Roy A. Skellie, Erie Cemetery, Erie PA (stone photo)</a></li><li id="s18"><a href="https://www.interment.net/data/us/pa/erie/laurel-hill-cemetery/records-sh-sn.htm" rel="noopener">Laurel Hill Cemetery, Erie PA, burial records (Interment.net): Harrison Roy &amp; Mary Doris Skellie</a></li><li id="s19"><a href="https://www.findagrave.com/memorial/5672345/harrison-roy-skellie" rel="noopener">Find a Grave #5672345: Harrison Roy Skellie, Laurel Hill Cemetery (stone photo)</a></li><li id="s20">Family knowledge (Mike / family). Living people are not searched in records.</li><li id="s21"><a href="https://socialsecuritydeathindexsearch.com/name/skellie/harrison" rel="noopener">Social Security Death Index: Harrison Skellie, b. 20 Jan 1920, d. Jul 1981, Erie PA</a></li><li id="s22"><a href="https://en.wikipedia.org/wiki/Ebenezer_Skellie" rel="noopener">Ebenezer Skellie, Medal of Honor (Wikipedia)</a></li><li id="s23"><a href="https://www.findagrave.com/memorial/5672341/mary-d-skellie" rel="noopener">Find a Grave #5672341: Mary D. Mathews Skellie — bio: married Harrison Roy Skellie 13 Sep 1947, Erie PA (Medium; compiler bio)</a></li><li id="s24"><a href="https://www.findagrave.com/memorial/65988073/alice-j-skellie" rel="noopener">Find a Grave #65988073: Alice J. Abbey Skellie — spouse of Roy A. “(m. 1916)” (Medium; year only)</a></li><li id="s25"><a href="https://www.findagrave.com/memorial/125478436/vena_florence-skellie" rel="noopener">Find a Grave #125478436: Vena Florence Duncombe Skellie (1902–1968) — spouse of Roy A.; marriage date TBD</a></li><li id="s26"><a href="https://www.findagrave.com/memorial/21245948/may-skellie" rel="noopener">Find a Grave #21245948: May Skellie (1871–1940), Mina Cemetery — spouse of George P.; marriage date TBD</a></li><li id="s27"><a href="https://www.findagrave.com/memorial/70547624/melissa-skellie" rel="noopener">Find a Grave #70547624: Melissa Holdridge Skellie (1842–1917) — spouse of Job D.; marriage date TBD</a></li><li id="s28"><a href="https://www.findagrave.com/memorial/214529602/orinda-skellie" rel="noopener">Find a Grave #214529602: Orinda Deuel/Duell Skellie (1804–1865) — first wife of Edward; marriage date TBD</a></li><li id="s29"><a href="https://www.findagrave.com/memorial/46274654/hannah-skellie" rel="noopener">Find a Grave #46274654: Hannah Edgar Skellie (1773–1851) — wife of John; marriage date TBD</a></li><li id="s30"><a href="https://www.findagrave.com/memorial/120400108/jannet-skellie" rel="noopener">Find a Grave #120400108: Jannet Skellie (1735–1780) — spouse of Alexander; marriage date TBD</a></li><li id="s31"><a href="https://www.findagrave.com/memorial/76771749/elizabeth-skellie" rel="noopener">Find a Grave #76771749: Elizabeth Skellie (1757–1819) — “wife of Alexander Skellie”; marriage date TBD</a></li></ol>
+
+  <footer>
+    Working tree for family and for SAR helper Bob Cochran. SAR Gen 1–9 numbering. Dates &amp; marriages researched Oct 5, 2026 (no invented dates; TBD where unproven).<br>
+    Living people: only family-approved facts are shown. David’s private DOB is not published.
+  </footer>
+</div>
+</body>
+</html>
